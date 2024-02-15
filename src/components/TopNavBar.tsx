@@ -5,6 +5,7 @@ import Toolbar from "@mui/material/Toolbar"
 import IconButton from "@mui/material/IconButton"
 import Typography from "@mui/material/Typography"
 import InputBase from "@mui/material/InputBase"
+import SearchBar from "./componentsSearchBar/SearchBar"
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
