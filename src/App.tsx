@@ -1,16 +1,23 @@
+import { Route, Routes } from "react-router-dom"
 import "./App.css"
+import TopNavBar from "./components/componentsNavBar/TopNavBar"
 import CreaNuovoPokemon from "./components/componentsForm/CreaNuovoPokemon"
-import TopNavBar from "./components/TopNavBar"
 import SearchBar from "./components/componentsSearchBar/SearchBar"
-import CardPokemon from "./components/componentsPokemon/CardPokemon"
+import CardDettaglioPokemon from "./components/componentsPokemon/CardDettaglioPokemon"
+import ListaPokemon from "./components/ComponentsListaPokemon/ListaPokemon"
 
 export default function App() {
   return (
     <>
-      <CardPokemon />
-      <SearchBar />
       <TopNavBar />
-      <CreaNuovoPokemon />
+      <div>
+        <Routes>
+          <Route path="/home" element={<SearchBar />} />
+          <Route path="/creazione" element={<CreaNuovoPokemon />} />
+          <Route path="/pokemon" element={<ListaPokemon />} />
+          <Route path="/pokemon/:id" element={<CardDettaglioPokemon />} />
+        </Routes>
+      </div>
     </>
   )
 }
